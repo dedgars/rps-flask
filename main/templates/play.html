@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+    RPS Flask
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>PLAY</h1>
+    <br>
+    <br>
+    <br>
+<form method ="post" action="/play">
+  <button type="submit" style="height:200px;width:200px" class="btn btn-info btn-lg" name="submit_button" value="ROCK"> ROCK </button>
+  <button type="submit" style="height:200px;width:200px" class="btn btn-danger btn-lg" name="submit_button" value="PAPER"> PAPER </button>
+  <button type="submit" style="height:200px;width:200px" class="btn btn-warning btn-lg" name="submit_button" value="SCISSORS"> SCISSORS </button>
+</form>
+
+</div>
+<br>
+<br>
+<div class="container">
+    <h2>{{ played }}</h2>
+    <h6>{{ vs }}</h6>
+    <h2>{{ c_played }}</h2>
+    <h5>{{ result }}</h5>
+
+</div>
+
+{% endblock %}
